@@ -173,6 +173,20 @@ body {
 
 }
 
+.optionBox span.right {
+
+    background-color: greenyellow;
+    border-color: greenyellow;
+    color: #fff;
+}
+
+
+.optionBox span.wrong {
+
+    background-color: red;
+    border-color: red;
+    color: #fff;
+}
 /* question page css ends */
 
 /* Media Query starts */
