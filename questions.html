@@ -22,8 +22,8 @@
 
 <div class="header">
 
-    <div class="scoreBox">Score : 0</div>
-    <div class="timerBox">Time left: 00:00</div>
+    <div class="scoreBox">Score : <span></span></div>
+    <div class="timerBox">Time left: <span></span></div>
 </div>
 
 <div class="questionBox">
@@ -31,17 +31,17 @@ what does HTML stands for ?
 </div>
     
 <div class="optionBox">
-    <span>hyper text mark up</span>
-    <span>hyper tag mark</span>
-    <span>hyper text</span>
-    <span>hyper text</span>
+    <span onclick="checkAnswer(this)" data-opt="1"></span>
+    <span onclick="checkAnswer(this)" data-opt="2"></span>
+    <span onclick="checkAnswer(this)" data-opt="3"></span>
+    <span onclick="checkAnswer(this)" data-opt="4"></span>
 </div>
 
 <div class="navigation">
-    <button class="btn btn-info">
+    <button class="btn btn-info" onclick="showNext()">
         Next
     </button>
-    <button class="btn btn-info">Show Result</button>
+    <button class="btn btn-info" onclick="showResult(1)">Show Result</button>
 </div>
 </div>
 
@@ -55,7 +55,7 @@ what does HTML stands for ?
         <label>Question:</label>
         <span id="totalQuestion">10</span>
         <label>Attempts:</label>
-        <span id="attemptQuestion">1</span>
+        <span id="attemptQuestion">0</span>
         <label>Correct:</label>
         <span id="correctAnswers">0</span>
         <label>Wrong:</label>
@@ -73,6 +73,7 @@ what does HTML stands for ?
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
  <!-- Bootstrap JavaScript Bundle with Popper -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
- <script src="JS/script.js"></script>   
+ <script src="JS/script.js"></script>  
+ <script src="JS/quiz.js"></script> 
 </body>
 </html>
