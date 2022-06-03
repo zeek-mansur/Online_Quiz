@@ -118,7 +118,7 @@
         }
 
   ];
-
+// randomizing the quiz questions after refresh //
   let questions = quiz.sort(function(){
 
     return 0.5 - Math.random();
@@ -126,38 +126,40 @@
 
   let totalQuestion = questions.length;
 
- $(function(){
+    $(function(){
 
-    // timer code start from here //
-
-    let totalTime = 60;
-    let min= 0;
-    let sec = 0;
-    let counter = 0
-
-    let timer =setInterval(function(){
-        counter++;
-        min= Math.floor((totalTime - counter)/60); //calculating min
-        sec = totalTime - (min * 60) - counter
-     
-        if (counter === totalTime) {
-
-            alert("Time is up. Press ok to show result");
-            result();
-            clearInterval(timer);
-        }
-       
-
-        $(".timerBox span").text(min + ":" + sec);
-
-    },1000); // timer has been set for 1 sec intervals
-    // timer code ends  here //
+        // timer code start from here //
     
-// print questions//
-
- printQuestion(index);
-
- })
+        let totalTime = 200;
+        let min= 0;
+        let sec = 0;
+        let counter = 0
+    
+        let timer = setInterval(function(){
+            counter++;
+            min= Math.floor((totalTime - counter)/60); //calculating min
+            sec = totalTime - (min * 60) - counter
+         
+            if (counter === totalTime) {
+    
+                alert("Time is up. Press ok to show result");
+                result(); //calls result function after time has ended//
+                clearInterval(timer);
+            }
+           
+            $(".timerBox span").text(min + ":" + sec);
+    
+        },1000);
+        
+        // timer has been set for 1 sec intervals
+        // timer code ends  here //
+        
+    // print questions//
+    
+     printQuestion(index);
+    
+     })
+ 
 
 
     // Print Questions starts //
@@ -215,7 +217,7 @@
         }
 
         index++;
-    
+        // Removing class from previous answered question and re-adding the class back for next question //
         $(".optionBox span").removeClass();
         $(".optionBox span").attr("onclick", "checkAnswer(this)");
 
@@ -244,7 +246,7 @@
 
             return;
         }
-            result();
+            result(); // calls result function onclick//
     }
 
     //function show result ends //
@@ -264,3 +266,54 @@
     }
     //result function ends//
 
+    const openModalButtons = document.querySelectorAll("[data-modal-target]");
+    const closeModalButtons = document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById("overlay");
+    
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+    
+            const modal = document.querySelector(button.dataset.modalTarget);
+            openModal(modal);
+        })
+       
+    });
+    
+    overlay.addEventListener('click', () => {
+    
+        const modals = document.querySelectorAll('.modal.active');
+        modals.forEach(modal => {
+            closeModal(modal);
+        })
+    });
+    
+    
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+    
+            const modal = button.closest(".modal")
+            closeModal(modal);
+        })
+        
+    });
+    
+    //open instruction function //
+    function openModal (modal) {
+    
+        if (modal === null)
+        return
+        modal.classList.add('active');
+        overlay.classList.add('active');
+    
+    }
+    
+    //close instruction function //
+    function closeModal (modal) {
+    
+        if (modal === null)
+        return
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+    
+    }
+    
