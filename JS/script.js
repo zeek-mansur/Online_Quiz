@@ -7,67 +7,67 @@
  
  quiz = [
     {
-      question: "Who invented JavaScript?",
+      question: "Which of the following jQuery method apply a style on an element?",
       answers: [
-         "a: Douglas Crockford",
-         "b: Sheryl Sandberg",
-         "c: Brendan Eich",
-         "d: Ben Mee"
+         "a: addStyle(classes)",
+         "b: addClass( classes )",
+         "c: addCSSClass(classes)",
+         "d: None of the above."
     ],
-      correctAnswer: "3"
+      correctAnswer: "2"
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: "Which of the following type of variable is visible everywhere in your JavaScript code?",
       answers: 
         [
-        "a: Node.js",
-        "b: TypeScript",
-        "c: npm",
-        "d: JScript"
+        "a: Global variable",
+        "b: Local variable",
+        "c: Both of the above.",
+        "d: None of the above."
         ],
-      correctAnswer: "3"
+      correctAnswer: "1"
     },
     {
-      question: "Which tool can you use to ensure code quality?",
+      question: "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
       answers: 
         [
-        "a: Angular",
-        "b: jQuery",
-        "c: RequireJS",
-        "d: ESLint"
+        "a: getIndex()",
+        "b: location()",
+        "c: indexOf()",
+        "d: None of the above."
         ],
-      correctAnswer: "4"
+      correctAnswer: "3"
     },
 
     {
-        question: "Who invented JavaScript?",
+        question: "Which built-in method reverses the order of the elements of an array?",
         answers: [
-           "a: Douglas Crockford",
-           "b: Sheryl Sandberg",
-           "c: Brendan Eich",
-           "d: Ben Mee"
+           "a: changeOrder(order)",
+           "b: reverse()",
+           "c: sort(order)",
+           "d: None of the above."
       ],
-        correctAnswer: "3"
+        correctAnswer: "2"
       },
       {
-        question: "Which one of these is a JavaScript package manager?",
+        question: "Which of the following function of Number object returns the number's value?",
         answers: 
           [
-          "a: Node.js",
-          "b: TypeScript",
-          "c: npm",
-          "d: JScript"
+          "a: toString()",
+          "b: valueOf()",
+          "c: toLocaleString()",
+          "d: toPrecision()"
           ],
-        correctAnswer: "3"
+        correctAnswer: "2"
       },
       {
-        question: "Which tool can you use to ensure code quality?",
+        question: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
         answers: 
           [
-          "a: Angular",
-          "b: jQuery",
-          "c: RequireJS",
-          "d: ESLint"
+          "a: concat()",
+          "b: match()",
+          "c: replace()",
+          "d: search()"
           ],
         correctAnswer: "4"
       },
@@ -78,20 +78,20 @@
            "a: Douglas Crockford",
            "b: Sheryl Sandberg",
            "c: Brendan Eich",
-           "d: Ben Mee"
+           "d: Vinton Cerf"
       ],
         correctAnswer: "3"
       },
       {
-        question: "Which one of these is a JavaScript package manager?",
+        question: "Which of the following function of String object returns the calling string value converted to lower case while respecting the current locale?",
         answers: 
           [
-          "a: Node.js",
-          "b: TypeScript",
-          "c: npm",
-          "d: JScript"
+          "a: toLocaleLowerCase()",
+          "b: toLowerCase()",
+          "c: toString()",
+          "d: substring()"
           ],
-        correctAnswer: "3"
+        correctAnswer: "1"
       },
       {
         question: "Which tool can you use to ensure code quality?",
@@ -107,14 +107,14 @@
       
       
         {
-            question: "Who invented JavaScript?",
+            question: "Which of the following function of String object causes a string to be displayed as a subscript, as if it were in a <sub> tag?",
             answers: [
-               "a: Douglas Crockford",
-               "b: Sheryl Sandberg",
-               "c: Brendan Eich",
-               "d: Ben Mee"
+               "a: sup()",
+               "b: small()",
+               "c: strike()",
+               "d: sub()"
           ],
-            correctAnswer: "3"
+            correctAnswer: "4"
         }
 
   ];
