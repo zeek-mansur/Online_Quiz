@@ -16,58 +16,59 @@
 </head>
 <body>
   
-<div class="box" id="questionScreen">
-<div class="title">
-    Online Quiz Application
-</div>
+    <div class="box" id="questionScreen">
+        <div class="title">
+            <div> Online Quiz Application</div>
+            <div class="total-q"></div>
+        </div>
 
-<div class="header">
 
-    <div class="scoreBox">Score : <span></span></div>
-    <div class="timerBox">Time left: <span></span></div>
-</div>
+        <div class="header">
+            <div class="scoreBox">Score : <span></span></div>
+            <div class="timerBox">Time left: <span></span></div>
+        </div>
 
-<div class="questionBox">
+        <div class="questionBox">
+        </div>
+        
+        <div class="optionBox">
+            <span onclick="checkAnswer(this)" data-opt="1"></span>
+            <span onclick="checkAnswer(this)" data-opt="2"></span>
+            <span onclick="checkAnswer(this)" data-opt="3"></span>
+            <span onclick="checkAnswer(this)" data-opt="4"></span>
+        </div>
 
-</div>
-    
-<div class="optionBox">
-    <span onclick="checkAnswer(this)" data-opt="1"></span>
-    <span onclick="checkAnswer(this)" data-opt="2"></span>
-    <span onclick="checkAnswer(this)" data-opt="3"></span>
-    <span onclick="checkAnswer(this)" data-opt="4"></span>
-</div>
-
-<div class="navigation">
-    <button class="btn btn-info" onclick="showNext()">
-        Next
-    </button>
-    <button class="btn btn-info" onclick="showResult(1)">Show Result</button>
-</div>
-</div>
-
-<div class="box" id="resultScreen" style="display: none;">
-
-    <div class="title">
-        Online Quiz Result
+        <div class="navigation">
+            <button class="btn" onclick="showNext()">
+                Next
+            </button>
+            <button class="btn" onclick="showResult(1)">
+                Show Result
+            </button>
+        </div>
     </div>
 
-    <div class="resultBox">
-        <label>Question:</label>
-        <span id="totalQuestion">10</span>
-        <label>Attempts:</label>
-        <span id="attemptQuestion">0</span>
-        <label>Correct:</label>
-        <span id="correctAnswers">0</span>
-        <label>Wrong:</label>
-        <span id="wrongAnswers">0</span>
-    </div>
+    <div class="box" id="resultScreen" style="display: none;">
 
-    <div class="buttonBox">
-        <a class="btn btn-info" href="index.html">Start again</a>
-    </div>
+        <div class="title">
+            Online Quiz Result
+        </div>
 
-</div>
+        <div class="resultBox">
+            <label>Question:</label>
+            <span id="totalQuestion"></span>
+            <label>Attempts:</label>
+            <span id="attemptQuestion"></span>
+            <label>Correct:</label>
+            <span id="correctAnswers"></span>
+            <label>Wrong:</label>
+            <span id="wrongAnswers"></span>
+        </div>
+
+        <div class="buttonBox">
+            <a class="btn" href="index.html">Start again</a>
+        </div>
+    </div>
 
 
  <!-- Jquery min cdn -->
