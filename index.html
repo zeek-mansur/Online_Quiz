@@ -15,45 +15,48 @@
     <title>Online Quiz</title>
 </head>
 <body>
-   
     <div class="container">
 
         <div class="leftSide">
-                <img src="image/Q&A.jpeg" alt="Quiz logo">
+            <img src="image/light.jpeg" alt="Quiz logo">
         </div>
 
         <div class="rightSide">
-                <h1>Welcome to Online Quiz</h1>
+            <h1>Welcome to Online Quiz</h1>
 
-                <button class="btn btn-info" data-modal-target = "#modal" >How to play</button>
-                <div class="modal" id="modal">
-                    <div class="modalHeader">
-                        <div class="titlee">Instrcutions</div>
-                        <button data-close-button class="closeButton">&times;</button>
-                    </div>
-                    <div class="modalBody">
-                        <ul>
-                            <li>10 Questions (20 secs each)</li>
-                            <li>400 seconds total timer</li>
-                            <li>Random Question</li>
-                            <li>Display final results</li>
-                        </ul>
-                    </div>
+            <button class="btn" data-modal-target = "#modal" >
+                How to play
+            </button>
+            <div class="modal" id="modal">
+                <div class="modalHeader">
+                    <div class="titlee">Instrcutions</div>
+                    <button data-close-button class="closeButton">&times;</button>
                 </div>
-                <div id="overlay"></div>
+                <div class="modalBody">
+                    <ul>
+                        <li>10 Questions (20 secs each)</li>
+                        <li>400 seconds total timer</li>
+                        <li>Random Question</li>
+                        <li>Display final results</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="overlay"></div>
 
-                <h2>Features :- </h2>
+            <h2>Features :- </h2>
 
-                <ul>
-                    <li>10 Questions (20 secs each)</li>
-                    <li>400 seconds total timer</li>
-                    <li>Random Question</li>
-                    <li>Display final results</li>
-                </ul>
+            <ul>
+                <li>10 Questions (20 secs each)</li>
+                <li>400 seconds total timer</li>
+                <li>Random Question</li>
+                <li>Display final results</li>
+            </ul>
 
-                <a  class="btn btn-outline-info btn-lg " id="startTimer" href="questions.html">Start Quiz</a>
+            <a  class="btn btn-lg " href="questions.html">
+                Start Quiz
+            </a>
         </div>
- 
+    </div>
     <!-- Jquery min cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap JavaScript Bundle with Popper -->
