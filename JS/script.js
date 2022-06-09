@@ -1,11 +1,24 @@
 
+ 'use strict';
+
  let index = 0;
  let attempt = 0;
  let score = 0;
  let wrong = 0;
  
- 
- quiz = [
+ //Array of objects //
+ let quiz = [
+  {
+    question: "Which one of these is a JavaScript package manager?",
+    answers: [
+       "a: Node.js",
+       "b: TypeScript",
+       "c: npm",
+       "d: None of the above."
+  ],
+    correctAnswer: "3"
+  },
+    
     {
       question: "Which of the following jQuery method apply a style on an element?",
       answers: [
@@ -118,6 +131,42 @@
         }
 
   ];
+
+  /* function for question number count starts here
+      tutotial link https://www.youtube.com/watch?v=QU6z69P5BrU  
+    */
+  const questionNumber = document.querySelector('.total-q');
+
+  let currentQuestion;
+  let availableQuestions = [];
+
+// push the questions into available questions array//
+  const setAvailableQuestions = () => {
+
+    const totalQuestion = questions.length; 
+
+     for (let i = 0; i < totalQuestion; i++){
+
+      availableQuestions.push(questions[i])
+     }
+
+  }
+
+  const getNewQuestion = () => {
+    // set the question number// 
+    questionNumber.innerHTML = "Q" + (index + 1) + " of " + (questions.length - 1);
+    
+    index++
+  }
+
+  window.onload = () => {
+
+    setAvailableQuestions();
+    getNewQuestion();
+  }
+
+  // Function for question number count ends here //
+
 // randomizing the quiz questions after refresh //
   let questions = quiz.sort(function(){
 
@@ -128,7 +177,8 @@
 
     $(function(){
 
-        // timer code start from here //
+        /* timer code start from here 
+        tutotial link https://www.youtube.com/watch?v=Tf9hr4tmhK4 */
     
         let totalTime = 200;
         let min= 0;
@@ -210,13 +260,19 @@
 
     const showNext = () => {
 
-        if(index >= (questions.length - 1 )){
+        if(index >= (questions.length - 1)){
 
             showResult(0);
             return;
         }
 
-        index++;
+        else{
+
+          getNewQuestion();
+
+        }
+
+        
         // Removing class from previous answered question and re-adding the class back for next question //
         $(".optionBox span").removeClass();
         $(".optionBox span").attr("onclick", "checkAnswer(this)");
@@ -255,10 +311,9 @@
 
     const result = () => {
 
-
         $("#questionScreen").hide();
         $("#resultScreen").show();
-        $("#totalQuestion").text(totalQuestion);
+        $("#totalQuestion").text(totalQuestion-1);
         $("#attemptQuestion").text(attempt);
         $("#correctAnswers").text(score);
         $("#wrongAnswers").text(wrong);
@@ -281,12 +336,12 @@
     
     overlay.addEventListener('click', () => {
     
-        const modals = document.querySelectorAll('.modal.active');
-        modals.forEach(modal => {
-            closeModal(modal);
-        })
-    });
-    
+      const modals = document.querySelectorAll('.modal.active');
+      modals.forEach(modal => {
+          closeModal(modal);
+      })
+  });
+  
     
     closeModalButtons.forEach(button => {
         button.addEventListener('click', () => {
