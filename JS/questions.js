@@ -9,123 +9,123 @@
  //Array of objects //
  let quiz = [
   {
-    question: "Which one of these is a JavaScript package manager?",
+    question: "In which ocean 'Bermuda Triangle' region is located?",
     answers: [
-       "a: Node.js",
-       "b: TypeScript",
-       "c: npm",
-       "d: None of the above."
+       "A: Atlantic",
+       "B: Indian",
+       "C: Pacific",
+       "D: Arctic"
   ],
-    correctAnswer: "3"
+    correctAnswer: "1"
   },
     
     {
-      question: "Which of the following jQuery method apply a style on an element?",
+      question: "Which country is known as the 'playground of Europe?",
       answers: [
-         "a: addStyle(classes)",
-         "b: addClass( classes )",
-         "c: addCSSClass(classes)",
-         "d: None of the above."
+         "A: Austria",
+         "B: Holland",
+         "C: Switzerland",
+         "D: Italy"
     ],
-      correctAnswer: "2"
-    },
-    {
-      question: "Which of the following type of variable is visible everywhere in your JavaScript code?",
-      answers: 
-        [
-        "a: Global variable",
-        "b: Local variable",
-        "c: Both of the above.",
-        "d: None of the above."
-        ],
-      correctAnswer: "1"
-    },
-    {
-      question: "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
-      answers: 
-        [
-        "a: getIndex()",
-        "b: location()",
-        "c: indexOf()",
-        "d: None of the above."
-        ],
       correctAnswer: "3"
     },
+    {
+      question: "Which continent has the highest number of countries ?",
+      answers: 
+        [
+        "A: Asia",
+        "B: Europe",
+        "C: North America",
+        "D: Africa"
+        ],
+      correctAnswer: "4"
+    },
+    {
+      question: "Total number of oceans in the world is ",
+      answers: 
+        [
+        "A: 3",
+        "B: 5",
+        "C: 7",
+        "D: 12"
+        ],
+      correctAnswer: "2"
+    },
 
     {
-        question: "Which built-in method reverses the order of the elements of an array?",
+        question: "The world's longest straight road without any corners is located in ?",
         answers: [
-           "a: changeOrder(order)",
-           "b: reverse()",
-           "c: sort(order)",
-           "d: None of the above."
-      ],
-        correctAnswer: "2"
-      },
-      {
-        question: "Which of the following function of Number object returns the number's value?",
-        answers: 
-          [
-          "a: toString()",
-          "b: valueOf()",
-          "c: toLocaleString()",
-          "d: toPrecision()"
-          ],
-        correctAnswer: "2"
-      },
-      {
-        question: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
-        answers: 
-          [
-          "a: concat()",
-          "b: match()",
-          "c: replace()",
-          "d: search()"
-          ],
-        correctAnswer: "4"
-      },
-
-      {
-        question: "Who invented JavaScript?",
-        answers: [
-           "a: Douglas Crockford",
-           "b: Sheryl Sandberg",
-           "c: Brendan Eich",
-           "d: Vinton Cerf"
+           "A: USA",
+           "B: Australia",
+           "C: Suadi Arabia",
+           "D: China"
       ],
         correctAnswer: "3"
       },
       {
-        question: "Which of the following function of String object returns the calling string value converted to lower case while respecting the current locale?",
+        question: "In football, which team has won the Champions League (formerly the European Cup) the most?",
         answers: 
           [
-          "a: toLocaleLowerCase()",
-          "b: toLowerCase()",
-          "c: toString()",
-          "d: substring()"
+          "A: AC Millan",
+          "B: Liverpool",
+          "C: Bayern Munich",
+          "D: Real Madrid"
+          ],
+        correctAnswer: "4"
+      },
+      {
+        question: "How many minutes are in a full week?",
+        answers: 
+          [
+          "A: 10,080",
+          "B: 12,100",
+          "C: 9,880",
+          "D: 11,240"
+          ],
+        correctAnswer: "1"
+      },
+
+      {
+        question: "In which country, white elephant is found",
+        answers: [
+           "A: India",
+           "B: Sri Lanka",
+           "C: Thailand",
+           "D: Malaysia"
+      ],
+        correctAnswer: "3"
+      },
+      {
+        question: "Which one is the largest tropical rain forest in the world",
+        answers: 
+          [
+          "A: Amazon",
+          "B: Bosawas",
+          "C: Southeast Asian Rain Forest",
+          "D: Daintree Rain forest"
           ],
         correctAnswer: "1"
       },
       {
-        question: "Which tool can you use to ensure code quality?",
+        question: "What is the largest country in the world?",
         answers: 
           [
-          "a: Angular",
-          "b: jQuery",
-          "c: RequireJS",
-          "d: ESLint"
+          "A: USA",
+          "B: Russia",
+          "C: China",
+          "D: India"
           ],
-        correctAnswer: "4"
+        correctAnswer: "2"
       },
       
       
         {
-            question: "Which of the following function of String object causes a string to be displayed as a subscript, as if it were in a <sub> tag?",
+            question: "Which planet in the Milky Way is the hottest?",
             answers: [
-               "a: sup()",
-               "b: small()",
-               "c: strike()",
-               "d: sub()"
+               "A: Earth",
+               "B: Mars",
+               "C: Jupiter",
+               "D: Venus"
           ],
             correctAnswer: "4"
         }
