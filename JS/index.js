@@ -34,9 +34,9 @@
     });
     
     //open instruction function //
-    function openModal (modal) {
+    const  openModal = (modal) => {
     
-        if (modal === null)
+        if (!modal)
         return
         modal.classList.add('active');
         overlay.classList.add('active');
@@ -46,7 +46,7 @@
     //close instruction function //
     function closeModal (modal) {
     
-        if (modal === null)
+        if (!modal)
         return
         modal.classList.remove('active');
         overlay.classList.remove('active');
