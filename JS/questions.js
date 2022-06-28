@@ -168,7 +168,7 @@
   // Function for question number count ends here //
 
 // randomizing the quiz questions after refresh //
-  let questions = quiz.sort(function(){
+  let questions = quiz.sort( () => {
 
     return 0.5 - Math.random();
   });
@@ -178,17 +178,24 @@
     $(function(){
 
         /* timer code start from here 
-        tutotial link https://www.youtube.com/watch?v=Tf9hr4tmhK4 */
+        tutorial link https://www.youtube.com/watch?v=Tf9hr4tmhK4 */
     
         let totalTime = 200;
         let min= 0;
         let sec = 0;
         let counter = 0;
-    
-        let timer = setInterval(function(){
-            counter++;
+        let pauseTimer = document.querySelector(".pause-timer");
+        let resumeTimer = document.querySelector(".resume-timer");
+
+// tutorial link for pause and resume timer https://www.youtube.com/watch?v=sRdCCVGuqHc //
+        let isPaused = false; 
+        let timer = setInterval(() => {
+            if(!isPaused && totalTime >=0) {
+              counter++;
             min= Math.floor((totalTime - counter)/60); //calculating min
-            sec = totalTime - (min * 60) - counter
+            sec = totalTime - (min * 60) - counter; //calculating secs 
+            }
+            
          
             if (counter === totalTime) {
     
@@ -197,13 +204,31 @@
                 clearInterval(timer);
             }
            
-            $(".timerBox span").text(min + ":" + sec);
+            $(".timer-box span").text(min + ":" + sec);
     
         },1000);
         
         // timer has been set for 1 sec intervals
         // timer code ends  here //
-        
+
+        //code to pause and resume countdown starts
+        pauseTimer.addEventListener("click", (e) => {
+         if (isPaused = true) {
+
+          e.preventDefault();
+         }
+    
+        })
+
+        resumeTimer.addEventListener("click", (e) => {
+          if (isPaused = false) {
+ 
+           e.preventDefault();
+          }         
+         })
+        //code to pause and resume countdown ends
+
+
     // print questions//
     
      printQuestion(index);
@@ -218,13 +243,11 @@
 
            // console.log(quiz);
 
-        $('.questionBox').text(questions[i].question);
-        $('.optionBox span').eq(0).text(questions[i].answers[0]);
-        $('.optionBox span').eq(1).text(questions[i].answers[1]);
-        $('.optionBox span').eq(2).text(questions[i].answers[2]);
-        $('.optionBox span').eq(3).text(questions[i].answers[3]);
-
-
+        $('.question-box').text(questions[i].question);
+        $('.option-box span').eq(0).text(questions[i].answers[0]);
+        $('.option-box span').eq(1).text(questions[i].answers[1]);
+        $('.option-box span').eq(2).text(questions[i].answers[2]);
+        $('.option-box span').eq(3).text(questions[i].answers[3]);
     };
     // Print Questions end //
 
@@ -235,23 +258,26 @@
         attempt++;
 
         let optionClicked = $(option).data("opt");
+        let button = document.querySelector("#question-screen > div.navigation > button.btn.disabled")
 
        // console.log(questions[index]);
 
         if(optionClicked == questions[index].correctAnswer){
             $(option).addClass("right");
+            $(button).removeClass("disabled");
             score++;
         }
 
         else{
 
             $(option).addClass("wrong");
+            $(button).removeClass("disabled");
             wrong++;
         }
 
-        $(".scoreBox span").text(score);
+        $(".score-box span").text(score);
 
-        $(".optionBox span").attr("onclick", ""); 
+        $(".option-box span").attr("onclick", ""); 
     };
 
     //function to check answer end //
@@ -274,8 +300,9 @@
 
         
         // Removing class from previous answered question and re-adding the class back for next question //
-        $(".optionBox span").removeClass();
-        $(".optionBox span").attr("onclick", "checkAnswer(this)");
+        $(".option-box span").removeClass();
+        $(".option-box span").attr("onclick", "checkAnswer(this)");
+        $("button:nth-child(1)").addClass("disabled");
 
 
         printQuestion(index);
@@ -286,8 +313,6 @@
 
 
     //function show result starts //
-
-    
 
     const showResult = (j) => {
 
@@ -311,12 +336,12 @@
 
     const result = () => {
 
-        $("#questionScreen").hide();
-        $("#resultScreen").show();
-        $("#totalQuestion").text(totalQuestion-1);
-        $("#attemptQuestion").text(attempt);
-        $("#correctAnswers").text(score);
-        $("#wrongAnswers").text(wrong);
+        $("#question-screen").hide();
+        $("#result-screen").show();
+        $("#total-question").text(totalQuestion-1);
+        $("#attempt-question").text(attempt);
+        $("#correct-answers").text(score);
+        $("#wrong-answers").text(wrong);
 
     };
     //result function ends//
