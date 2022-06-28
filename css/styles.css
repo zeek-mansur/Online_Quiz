@@ -12,9 +12,41 @@ body {
     background-image: url(../image/pexels-peter-olexa-3875821.jpg);
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    
+    width: 100%; 
+}
+
+.text-center {
+
+    text-align: center;
+    
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-content {
+
+    width: 100%;
+    min-height: 80px;
+    background-color: #fff;
+    text-align: center;
+    
 }
 
 .container {
@@ -25,30 +57,31 @@ body {
     min-height: 350px;
     padding: 80px 90px;
     border-radius: 10px;
-    display: flex;       
-    
+    display: flex;
+    justify-content:center ;  
+        
 }
 
-.leftSide, .rightSide {
+.left-side, .right-side {
 
     width: 50%;
 }
 
-.leftSide img {
+.left-side img {
 
     height: 350px;
     width: 330px;
     border-radius: 10px;
 }
 
-.rightSide h1 {
+.right-side h1 {
 
     color: #243b55;
     font-size: 32px;
 
 }
 
-.rightSide h2 {
+.right-side h2 {
 
     color: #141e30;
     margin: 20px auto 10px;
@@ -66,11 +99,11 @@ body {
     list-style-position: outside;
 }
 
-.rightSide ul li {
+.right-side ul li {
 
     margin-top: 5px;
 }
-.rightSide a {
+.right-side a {
 
     width: 100%;
     margin-top: 25px;
@@ -87,6 +120,7 @@ body {
     min-height: 350px;
     width: 640px;
     padding: 50px;
+    align-self: center;
 
 }
 
@@ -109,7 +143,7 @@ body {
     justify-content: space-between;
 }
 
-.scoreBox, .timerBox {
+.score-box, .timer-box {
 
     border-radius: 50px;
     padding: 10px 15px;
@@ -118,7 +152,8 @@ body {
 
 }
 
-.questionBox{
+
+.question-box{
 
     background-color: #243b55;
     color: #fff;
@@ -133,14 +168,14 @@ body {
     color: #fff;
 }
 
-.optionBox {
+.option-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 30px 0;
     grid-gap: 15px;
 }
 
-.optionBox span{
+.option-box span{
 
     background-color: #2b5876;
     border-radius: 10px;
@@ -155,7 +190,7 @@ body {
     justify-content: space-between;
 }
 
-.resultBox {
+.result-box {
 
     margin-bottom: 30px;
     display: grid;
@@ -165,17 +200,17 @@ body {
 
 }
 
-.resultBox *:nth-child(odd){
+.result-box *:nth-child(odd){
 
     text-align: right;
 }
 
-.resultBox span{
+.resultbox span{
 
     font-weight: 600;
 }
 
-.buttonBox{
+.button-box{
 
     border-top: 1px solid #444;
     padding-top: 15px;
@@ -183,7 +218,7 @@ body {
 
 }
 
-.optionBox span.right {
+.option-box span.right {
 
     background-color: rgb(37, 183, 42);
     border-color: rgb(50, 103, 52);
@@ -191,7 +226,7 @@ body {
 }
 
 
-.optionBox span.wrong {
+.option-box span.wrong {
 
     background-color: red;
     border-color: rgb(118, 69, 69);
@@ -205,7 +240,7 @@ body {
 
     
    
-    .leftSide {
+    .left-side {
         display: none;
     }
 
@@ -215,14 +250,14 @@ body {
         
     
     }
-    .rightSide{
+    .right-side{
         width: 100%;
         font-size: x-small;
 
         
     }
 
-    .optionBox {
+    .option-box {
 
         grid-template-columns: 1fr;
     }
@@ -232,7 +267,7 @@ body {
 
     
    
-    .leftSide {
+    .left-side {
         display: none;
     }
 
@@ -250,11 +285,11 @@ body {
         font-size: medium;
     }
 
-    .rightSide h1 {
+    .right-side h1 {
 
         font-size: 25px;
     }
-     .rightSide h2 {
+     .right-side h2 {
 
         font-size: 20px;
 
@@ -269,7 +304,7 @@ body {
         font-size: small !important;
      }
 
-    .resultBox {
+    .result-box {
 
         font-size: 18px;
     }
@@ -278,13 +313,13 @@ body {
 
         font-size: medium;
     }
-    .rightSide{
+    .right-side{
         width: 100%;
         font-size: x-small;
   
     }
 
-    .optionBox {
+    .option-box {
 
         grid-template-columns: 1fr;
     }
@@ -294,7 +329,7 @@ body {
 
     
    
-    .leftSide {
+    .left-side {
         display: none;
     }
 
@@ -312,17 +347,17 @@ body {
         font-size: 12px;
     }
 
-    .rightSide h1 {
+    .right-side h1 {
 
         font-size: 20px;
     }
 
-    .rightSide h2 {
+    .right-side h2 {
 
         font-size: 18px;
     }
 
-    .resultBox {
+    .result-box {
 
         font-size: 15px;
     }
@@ -337,13 +372,13 @@ body {
         font-size: 10px;
     }
 
-    .rightSide{
+    .right-side{
         width: 100%;
         font-size: 5px;
   
     }
 
-    .optionBox {
+    .option-box {
 
         grid-template-columns: 1fr;
     }
@@ -383,7 +418,7 @@ tutotial link https://www.youtube.com/watch?v=MBaw_6cPmAw
     display: table-cell;  
 }
 
-.modalHeader {
+.modal-header {
 
     padding: 10px 15px;
     display: flex;
@@ -392,14 +427,14 @@ tutotial link https://www.youtube.com/watch?v=MBaw_6cPmAw
     border-bottom: 1px solid black;
 }
 
-.modalHeader .titlee {
+.modal-header .titlee {
 
 font-size: 1.25rem;
 font-weight: bold;
 
 }
 
-.modalHeader .closeButton {
+.modal-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -408,7 +443,7 @@ font-weight: bold;
     font-weight: bold;
 }
 
-.modalBody {
+.modal-body {
 
     padding: 10px 15px;
 }
