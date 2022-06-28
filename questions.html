@@ -15,61 +15,108 @@
     <title>Questions</title>
 </head>
 <body>
+    <header>
+    <!--navbar reference https://getbootstrap.com/docs/5.2/components/navbar/  -->
+
+    <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+         <div>
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logo1.jpeg" alt="" width="100" height="70">
+            </a>
+           
+         </div>
+          <div class="justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Options</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Quit</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   
-    <div class="box" id="questionScreen">
-        <div class="title">
-            <div> Online Quiz Application</div>
-            <div class="total-q"></div>
-        </div>
+    
+        <div class="box" id="question-screen">
+            <div class="title">
+                <div> Online Quiz Application</div>
+                <div class="total-q"></div>
+            </div>
 
 
-        <div class="header">
-            <div class="scoreBox">Score : <span></span></div>
-            <div class="timerBox">Time left: <span></span></div>
-        </div>
+            <div class="header">
+                <div class="score-box">Score :0<span></span></div>
+                <div class="timer-box">Time left: <span></span></div>
+            </div>
 
-        <div class="questionBox">
-        </div>
+            <div class="question-box">
+            </div>
+            
+            <div class="option-box">
+                <span onclick="checkAnswer(this)" data-opt="1"></span>
+                <span onclick="checkAnswer(this)" data-opt="2"></span>
+                <span onclick="checkAnswer(this)" data-opt="3"></span>
+                <span onclick="checkAnswer(this)" data-opt="4"></span>
+            </div>
         
-        <div class="optionBox">
-            <span onclick="checkAnswer(this)" data-opt="1"></span>
-            <span onclick="checkAnswer(this)" data-opt="2"></span>
-            <span onclick="checkAnswer(this)" data-opt="3"></span>
-            <span onclick="checkAnswer(this)" data-opt="4"></span>
+            <div class="navigation">
+                <button class="btn disabled" onclick="showNext()">
+                    Next
+                </button>
+                <button class="btn pause-timer" >
+                    Pause
+                </button>
+                <button class="btn resume-timer" >
+                    Resume
+                </button>
+                <button class="btn" onclick="showResult(1)">
+                    Show Result
+                </button>
+            </div>
         </div>
+    
 
-        <div class="navigation">
-            <button class="btn" onclick="showNext()">
-                Next
-            </button>
-            <button class="btn" onclick="showResult(1)">
-                Show Result
-            </button>
-        </div>
-    </div>
-
-    <div class="box" id="resultScreen" style="display: none;">
+    <div class="box" id="result-screen" style="display: none;">
 
         <div class="title">
             Online Quiz Result
         </div>
 
-        <div class="resultBox">
+        <div class="result-box">
             <label>Question:</label>
-            <span id="totalQuestion"></span>
+            <span id="total-question"></span>
             <label>Attempts:</label>
-            <span id="attemptQuestion"></span>
+            <span id="attempt-question"></span>
             <label>Correct:</label>
-            <span id="correctAnswers"></span>
+            <span id="correct-answers"></span>
             <label>Wrong:</label>
-            <span id="wrongAnswers"></span>
+            <span id="wrong-answers"></span>
         </div>
 
-        <div class="buttonBox">
+        <div class="button-box">
             <a class="btn" href="index.html">Start again</a>
         </div>
     </div>
-
+    <footer>
+        <div class="footer-content">
+            <span class="copyright-message footer-font"> Zulkiful Mansur <br> &copy; 2022 </span>
+        </div>
+    </footer>
 
  <!-- Jquery min cdn -->
  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
