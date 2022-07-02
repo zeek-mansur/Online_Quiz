@@ -204,6 +204,7 @@
                 clearInterval(timer);
             }
            
+            
             $(".timer-box span").text(min + ":" + sec);
     
         },1000);
