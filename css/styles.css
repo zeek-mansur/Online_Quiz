@@ -15,13 +15,11 @@ body {
     justify-content: space-between;
     flex-direction: column;
     min-height: 100vh;
+   
 }
 
 
-header {
-    display: flex;
-    justify-content: center;
-}
+
 
 nav {
     
@@ -38,10 +36,6 @@ nav {
 footer {
     display: flex;
     justify-content: center;
-    
-}
-.footer-content {
-
     width: 100%;
     min-height: 80px;
     background-color: #fff;
